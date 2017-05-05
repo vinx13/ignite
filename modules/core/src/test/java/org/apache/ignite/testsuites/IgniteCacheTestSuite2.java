@@ -45,6 +45,7 @@ import org.apache.ignite.internal.processors.cache.IgniteCachePartitionMapUpdate
 import org.apache.ignite.internal.processors.cache.IgniteDynamicCacheAndNodeStop;
 import org.apache.ignite.internal.processors.cache.IgniteOnePhaseCommitInvokeTest;
 import org.apache.ignite.internal.processors.cache.MemoryPolicyConfigValidationTest;
+import org.apache.ignite.internal.processors.cache.database.MemoryPolicyInitializationTest;
 import org.apache.ignite.internal.processors.cache.distributed.CacheLoadingConcurrentGridStartSelfTest;
 import org.apache.ignite.internal.processors.cache.distributed.CacheLoadingConcurrentGridStartSelfTestAllowOverwrite;
 import org.apache.ignite.internal.processors.cache.distributed.CacheLockReleaseNodeLeaveTest;
@@ -251,6 +252,7 @@ public class IgniteCacheTestSuite2 extends TestSuite {
         suite.addTest(new TestSuite(NearCacheSyncUpdateTest.class));
         suite.addTest(new TestSuite(CacheConfigurationLeakTest.class));
         suite.addTest(new TestSuite(MemoryPolicyConfigValidationTest.class));
+        suite.addTest(new TestSuite(MemoryPolicyInitializationTest.class));
         suite.addTest(new TestSuite(CacheMemoryPolicyConfigurationTest.class));
         suite.addTest(new TestSuite(CacheEnumOperationsSingleNodeTest.class));
         suite.addTest(new TestSuite(CacheEnumOperationsTest.class));
