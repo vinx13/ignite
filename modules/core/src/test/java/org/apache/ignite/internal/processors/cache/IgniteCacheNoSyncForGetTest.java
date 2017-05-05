@@ -115,9 +115,10 @@ public class IgniteCacheNoSyncForGetTest extends GridCommonAbstractTest {
      */
     private void getTest(CacheAtomicityMode atomicityMode) throws Exception {
         boolean getAll[] = {true, false};
-        boolean cfgExpiryPlc[] = {true, false};
-        boolean withExpiryPlc[] = {true, false};
+        boolean cfgExpiryPlc[] = {false};
+        boolean withExpiryPlc[] = {false};
         boolean heapCache[] = {true, false};
+
         for (boolean getAll0 : getAll) {
             for (boolean expiryPlc0 : cfgExpiryPlc) {
                 for (boolean withExpiryPlc0 : withExpiryPlc) {
