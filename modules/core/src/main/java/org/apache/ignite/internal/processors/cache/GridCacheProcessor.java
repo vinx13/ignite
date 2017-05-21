@@ -328,6 +328,9 @@ public class GridCacheProcessor extends GridProcessorAdapter {
         perf.add("Disable fully synchronous writes (set 'writeSynchronizationMode' to PRIMARY_SYNC or FULL_ASYNC)",
             cfg.getWriteSynchronizationMode() != FULL_SYNC);
 
+        perf.add("Disable returning copies on read (set 'copyOnRead' to false)",
+            !cfg.isCopyOnRead());
+
         if (hasStore && cfg.isWriteThrough())
             perf.add("Enable write-behind to persistent store (set 'writeBehindEnabled' to true)",
                 cfg.isWriteBehindEnabled());
